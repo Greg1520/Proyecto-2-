@@ -5,87 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gregory Albarran</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png">
     <script src="https://kit.fontawesome.com/2f7fb50abe.js" crossorigin="anonymous"></script>
+  
 </head>
   <body>
-    
     <header>
-        <nav>
-            <ul>
-              <li><a href="#inicio" class="active">inicio</a></li>
-              <li> <a href="#contacto">contacto</a> </li>
-            </ul>
-          </nav>
+        <img src="./img/674147e7652f6388add8b9913639c6a7.jpg" class="logo">
+        <div class="nav-bar sticky">
+            <nav>
+                <div id="menu-desktop">
+                    <a href="#productos">productos</a>
+                    <a href="#Quiénes somos" >Quiénes somos</a>
+                    <a href="#Contacto">Contacto</a>
+                </div>
+                <div id="menu-mobile">
+                    <div id="burguer">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                        <span class="line3"></span>
+                    </div>
+                    <div>
+                    <a href="#productos">productos</a>
+                    <a href="#Quiénes somos">Quiénes somos</a>
+                    <a href="#Contacto">Contacto</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main> 
+        
         <center> 
-            
-            <img src="https://media.istockphoto.com/id/506799199/pt/foto/vendedor-feliz-loja-de-ferragens.webp?s=1024x1024&w=is&k=20&c=G3oI3U7w-NoVFe2R9NjfI_Wy9Izo0S4DITaQL8bRvUA=" alt="perfil">
-    
+            <img src="https://media.istockphoto.com/id/506799199/pt/foto/vendedor-feliz-loja-de-ferragens.webp?s=1024x1024&w=is&k=20&c=G3oI3U7w-NoVFe2R9NjfI_Wy9Izo0S4DITaQL8bRvUA=" alt="perfil" class="perfil">
         </center>
        
-        <section id="about">
+        <div id="productos">
+        <section class="productos">
+            <img src="https://m.media-amazon.com/images/I/61hhOHoEaCL.jpg" alt="Product 1">
+            <h3> Product 1 </h3>
+            <h6>Truper MA-16F, Martillo pulido, uña curva 16 oz, mango de fibra de vidrio</h6>
+            <p> Price $10</p>
+            <button class="add-to-cart" onclick="addToCart('Product 1',10)"> Add </button>
+        </section>
+        <section class="productos">
+            <img src="https://www.proyec.com.py/wp-content/uploads/2015/07/makita-5700nb.jpg" alt="Product 2">
+            <h3> Product 2 </h3>
+            <h6>Sierra circular de potencia Sierra de madera, 900 W</h6>
+            <p> Price $50</p>
+            <button class="add-to-cart" onclick="addToCart('Product 2',50)"> Add </button>
+        </section>
+        <section class="productos">
+            <img src="data:image/jpeg;base64,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" alt="Product 3">
+            <h3> Product 3 </h3>
+            <h6>Taladro inalámbrico 3/8 , 12 V, Pretul, Taladros, 29975</h6>
+            <p> Price $45</p>
+            <button class="add-to-cart" onclick="addToCart('Product 3',45)"> Add </button>
+        </section>
+        <section class="productos">
+            <img src="https://colombia.urrea.com/wp-content/uploads/2022/01/D251.jpg" alt="Product 4">
+            <h3> Product 4 </h3>
+            <h6>Destornillador con mango bimaterial, punta Phillips</h6>
+            <p> Price $8</p>
+            <button class="add-to-cart" onclick="addToCart('Product 4',8)"> Add </button>
+        </section>
+        <section class="productos">
+            <img src="https://www.herramientaprofesional.com/images/articulos/original/llave_inglesa_stanley_maxsteel_150_mm_5321-1.jpg" alt="Product 5">
+            <h3> Product 5 </h3>
+            <h6>Llave Inglesa Stanley MaxSteel - 150 mm</h6>
+            <p> Price $15</p>
+            <button class="add-to-cart" onclick="addToCart('Product 5',15)"> Add </button>
+            <button class="add-to-cart" onclick="checkout()"> buy </button>
+            <button class="add-to-cart" onclick="clearCart()"> clean </button>
+        </section>
+      </div>
+
+        <section id="Quiénes somos">
             <h1>SOBRE LA FERRETERIA</h1>
             <p> 
-                Ferreteria es una distribuidora de ferretería y accesorios. 
-                Fundada en 2005, atiende tanto a constructores, arquitectos y decoradores como a consumidores finales, disponiendo de una tienda física, ubicada en el barrio de Vila Nova Conceição, en São Paulo-SP.
+                Ferrexpres es una distribuidora de ferretería y accesorios. 
+                Fundada en 2005, atiende tanto a constructores, arquitectos y decoradores como a consumidores finales, disponiendo de una tienda física.
                 Nuestro diferencial es ofrecer soporte en la especificación de proyectos, y siempre buscamos ofrecer el producto más adecuado a sus necesidades. 
                 Ofrecemos una amplia gama de productos, divididos en varias categorías, y trabajamos con proveedores de productos nacionales e importados de alta calidad.
             </p>
                 
-                <h2>MISION</h2>
+                <h1>MISION</h1>
             <p>
                 Brindar productos de alta calidad que satisfagan las necesidades de nuestros clientes, ofreciendo soporte a los proyectos y aclarando dudas técnicas.
                 Nuestro principal objetivo es la satisfacción del cliente.
             </p>
                 
-                <h2>VAlORES</h2>
+                <h1>VAlORES</h1>
             <P>
-                Ferreteria valora la ética y la transparencia en la venta de productos. 
+                Ferrexpres valora la ética y la transparencia en la venta de productos. 
                 Para ello, ofrecemos todo el apoyo necesario para que cada compra se realice de forma rápida, segura y satisfactoria.
             </P>
         </section>
-            
-        <section class="product">
-           <img src="data:image/jpeg;base64,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"/>
-           <h3> Product 1 </h3>
-           <h6>Martillo para Techista Mango de Madera 27 Mm 680 Gr - Salkor Profesional</h6>
-           <p> Price: $10 </p>
-           <button> Add </button>
-        </section>
-        
-        <section class="product">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_844371-MLC44002065075_112020-O.webp"/>
-            <h3> Product 2 </h3>
-            <h6>Llave Inglesa Para Tubo 18 Ridgid</h6>
-            <p> Price: $30 </p>
-            <button> Add </button></section>
-        <section>
-
-        </section class="product">
-            <img src="https://www.vaqueiros.mx/wp-content/uploads/2022/10/taladro-profesional-truper-400w-3-8-pulgadas-tal-3-8a2-16708-1.jpg"/>
-            <h3> Product 3 </h3>
-            <h6>Taladro Profesional TRUPER 400 W 3/8" Mod. TAL-3/8A2 - Vaqueiros Ferreteros </h6>
-            <p> Price: $25 </p>
-            <button> Add </button><section>
-
-        </section class="product">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8cDP9OdCrxcOj7i1Z9OwdDolNDz7P4z4Hwg&usqp=CAU"/>
-            <h3> Product 4 </h3>
-            <h6>Sierra Circular 7- 1/4 Gutstark Disco Cortadora Madera Mano </h6>
-            <p> Price: $50 </p>
-            <button> Add </button><section>
-                <button> Add </button>
-                <button> Buy </button>
-                <button> Clean </button>
-
-        </section>
-        
-
-    <section id="contacto">
-        <h3> contacto</h3>
+    <section id="Contacto">
+        <h3> Contacto</h3>
         <form action="">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required />
@@ -109,10 +128,15 @@
         </a>
     </div>
 </section>
+<section class="cart">
+    <h2> store </h2>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total"> $0 </span></p>
+</section>
 <footer>
     <h6> @Derechos 2023 Albarran Gregory </h6>
 </footer>
 </main>
-    
+<script src="main.js"></script>
   </body>
 </html>

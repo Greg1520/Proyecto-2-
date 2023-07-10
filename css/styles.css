@@ -1,70 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:wght@600&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   }
+   
+body{
+   background-color: #f1f7ed;
+   font-family: 'Poltawski Nowy', serif;
    }
 
-body{
-    background-color: powderblue;
-    font-family: 'Poltawski Nowy', serif;
-    font-size: 16px;
-   }
+a{
+    color: #1c1c1c;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
 
 header{
-    background-color: rgb(45, 0, 128);
-    color:#f2f2f2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem;
+   background-color: #ececec;
+   color:#f2f2f2;
+   flex-wrap: wrap;
 }
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-main {
-    max-width: 1200px;
-    margin: auto;
+.logo{
+    max-width: 8rem;
 }
 
 nav a:hover{
-    color: blueviolet;
+    color:black
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 48px;
+    margin: 0;
     margin-bottom: 1rem;
     justify-content: center;
     text-align: center;
+}
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
 }
 
 section{
-    height: 400px;
+    height: 800px;
     padding: 2rem;
-    
 }
 
 h2{
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    justify-content: center;
-    text-align: center;
+    font-size: 32px;
+    padding: 2rem;
 }
 
 form label{
     display: block;
     margin-bottom: 0.5rem;
-
 }
 
 form input,
@@ -77,18 +76,8 @@ form textarea{
     font-size: 15px;
 }
 
-img{
-    display: flex;
-    width: 350px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-
-button{background-color: rgb(255, 30, 41);
+button{
+    background-color: #333;
     color: #f2f2f2;
     padding: 15px 20px;
     border-radius: 5px;
@@ -100,8 +89,8 @@ button{background-color: rgb(255, 30, 41);
 button:hover{
     transition: 1.7s;
     background-color: #f2f2f2;
-    color: rgb(255, 30, 41)
-    }
+    color: #333
+}
 
 .icons{
     display: flex;
@@ -109,59 +98,184 @@ button:hover{
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
-    }
+}
 
 i{
     font-size: 4rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
     line-height: 1;
-    }
+}
 
-footer{background-color:rgb(66, 0, 128);
-    color: #f2f2f2;
+footer{
+    background-color:#ececec;
+    color: #1c1c1c;
     text-align: center;
     padding: 1rem;
     margin: o auto;
 }
 
+@media (max-width: 768px) {
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+    nav ul{
+        margin-top: 1rem;
+        justify-content: center;
+    }
+    nav li{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
 
 
-nav ul{
+@media screen and (max-width: 550px) {
+    
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    display:flex ;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+}
+
+.perfil {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 1rem;
+    width: 350px;
     justify-content: center;
-    }
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-nav li{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    }
-
-/* desktop */
-@media (min-width: 1024px) {
-    section {
-    flex-direction: row;
-    }
-    }
-.product{
+.productos {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 15px;
-
+    margin-top: 0;
 }
 
-.product img{
-    max-width: 25vw;
+.productos img {
+    max-width: 15vw;
     height: auto;
 }
 
-.product h3{
-     margin-top: 0;
-}
-.product p{
+.productos p {
     margin-bottom: 0;
+}
+
+.productos h3{
+    margin-top: 0;
+}
+
+.add-to-cart{
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.cart{
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* menu hamburguesa */
+
+#menu-desktop{
+    display: none;
+}
+
+#menu-mobile{
+    display: flex;
+    width: auto;
+}    
+
+@media (min-width: 576px){
+    #menu-desktop{
+        display: flex;
+    }
+    #menu-mobile{
+        display: none;
+    }
+    .logo{
+        max-height: 120px;
+        max-width: 120px;
+    }
+}
+
+/* Burguer */
+
+#burguer{
+    min-width: 20px;
+    min-height: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+#burguer span{
+    border-radius: 5px;
+    background-color: #222;
+    width: 100%;
+    height: 2px;
+    transition: all 300ms ease-out;
+}
+
+/* active */
+
+#burguer.active .line1{
+    opacity: 0;
+    width: 0;
+}
+
+#burguer.active .line2{
+    transform: translateY(2.5px) rotate(45deg); 
+}
+
+#burguer.active .line3{
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+/* menu desplegable */
+#menu-mobile div:nth-child(2){
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #17a589;
+    width: 100vw;
+    height: 0px;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    transition: all 250ms ease-out;
+}
+
+#menu-mobile div.open:nth-child(2){
+    height: 100px;
 }
